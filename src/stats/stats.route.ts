@@ -6,5 +6,6 @@ const statsController = new StatsController();
 
 router.get('/', statsController.getTotal.bind(statsController));
 router.get('/coordinates', statsController.getByCoordinates.bind(statsController));
+router.get('/carbon', statsController.getByCarbonNumber.bind(statsController));
 
 export default router;

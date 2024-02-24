@@ -9,12 +9,20 @@ export class StatsController {
   }
 
   async getTotal(req: Request, res: Response) {
-    return res.status(200).json(await this.statsService.getTotal());
+    const startDate = req.query.startDate as unknown as Date;
+    const endDate = req.query.endDate as unknown as Date;
+    return res.status(200).json(await this.statsService.getTotal(startDate, endDate));
   }
 
   async getByCoordinates(req: Request, res: Response) {
     const startDate = req.query.startDate as unknown as Date;
     const endDate = req.query.endDate as unknown as Date;
     return res.status(200).json(await this.statsService.getByCoordinates(startDate, endDate));
+  }
+
+  async getByCarbonNumber(req: Request, res: Response) {
+    const startDate = req.query.startDate as unknown as Date;
+    const endDate = req.query.endDate as unknown as Date;
+    return res.status(200).json(await this.statsService.getByCarbonNumber(startDate, endDate));
   }
 }

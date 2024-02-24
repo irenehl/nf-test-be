@@ -13,6 +13,8 @@ export class ActivityService {
   }
 
   async create(data: CreateActivityDto): Promise<ActivityDto> {
+    console.log(data);
+    
     return this.prisma.activity.create({
       data: {
         ...data,
