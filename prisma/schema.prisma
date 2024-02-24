@@ -14,9 +14,10 @@ datasource db {
 }
 
 model Activity {
-  id        Int      @id @default(autoincrement())
-  type      Type
-  createdAt DateTime @default(now()) @map("created_at")
+  id        Int          @id @default(autoincrement())
+  type      ActivityType
+  createdAt DateTime     @default(now()) @map("created_at")
+  number    Int
 
   coordinates Coordinate[]
 
@@ -34,7 +35,7 @@ model Coordinate {
   @@map("coordinate")
 }
 
-enum Type {
+enum ActivityType {
   SOIL
   FERTILIZATION
 }
