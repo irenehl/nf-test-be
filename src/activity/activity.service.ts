@@ -2,8 +2,8 @@ import { PrismaClient } from '@prisma/client';
 import { ActivityDto } from './dtos/activity.dto';
 import { CreateActivityDto } from './dtos/create-activity.dto';
 import { UpdateActivityDto } from './dtos/update-activity.dto';
-import { CoordinateDto } from '@coordinate/dtos/coordinate.dto';
 import { HttpError } from '@common/http-error';
+import { CoordinateDto } from './dtos/coordinate.dto';
 
 export class ActivityService {
   private readonly prisma: PrismaClient;

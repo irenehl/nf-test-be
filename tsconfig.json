@@ -12,7 +12,8 @@
       "@activity/*": ["activity/*"],
       "@coordinate/*": ["coordinate/*"],
       "@common/*": ["common/*"],
-      "@middleware/*": ["middleware/*"]
+      "@middleware/*": ["middleware/*"],
+      "@stats/*": ["stats/*"]
     }
   },
   "include": ["src/**/*"],

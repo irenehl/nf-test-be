@@ -1,4 +1,4 @@
-import { CoordinateDto } from '@coordinate/dtos/coordinate.dto';
+import { CoordinateDto } from './coordinate.dto';
 import { ActivityType } from '@prisma/client';
 
 export interface UpdateActivityDto {
